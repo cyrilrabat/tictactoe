@@ -11,11 +11,11 @@ export default function TicTacToe() {
 
         if(nextSquares[i] == null && !calculateWinner(squares)) {
             nextSquares[i] = current;
+            setSquares(nextSquares);
             if(current == 'X')
                 setCurrent('O');
             else
                 setCurrent('X');
-            setSquares(nextSquares);
         }
     }
 
